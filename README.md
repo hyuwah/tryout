@@ -1,3 +1,35 @@
+# Refactory Tryout : Contacts App
+
+**Goal:** 
+The purpose of this try out is to determine if our applicants understand about basic component of mobile application
+
+**Story:** 
+Annabelle is a police officer and has some informant she wants to keep outside of her contacts app in her mobile device. She decide to make a new app that is simply a static app which loads her private contacts but she got no time so she asks you to do so
+
+**Requirements:**
+The app just loads a static array of objects from json file. The List should only display the full name (first name and last name) and the organization the contact related to.
+
+* When the contact is clicked, she will be shown with the detail of the contact which are: name, organization, phone number, and the address
+* She can go back to the lists as she want.
+* The appearance of the app should be simple and informative
+* The app can be built with ReactNative or Native Android
+
+**Nice to Have:**
+* She can add new contact.
+* Instead of static json files, internal storage would be a better place to save and load the contact list.
+
+## Implementation
+
+* Dummy data from `./components/dataDummy.js`
+* Navigation using `react-navigation`
+
+
+**Preview:**
+
+![Bare Minimum](https://res.cloudinary.com/hyuwah-github-io/image/upload/c_limit,h_480,q_auto:good/v1512379372/tryout_ContactsApp_bareMin_kxqlmi.gif)
+
+# create-react-native-app's README
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
