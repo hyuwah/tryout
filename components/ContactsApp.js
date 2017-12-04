@@ -50,6 +50,26 @@ class ContactsContainer extends React.Component {
         
     }
 
+    // Dirty state updater
+    componentDidMount() {
+        this.timerID = setInterval(
+          () => this.tick(),
+          1000
+        );
+      }
+    
+      componentWillUnmount() {
+        clearInterval(this.timerID);
+      }
+    
+      tick() {
+        this.setState({
+            items:this.state.items
+        });
+      }
+
+    
+
     // updateItem(item, index) {
     //     var items = this.state.items;
     //     if (index) {
@@ -62,7 +82,9 @@ class ContactsContainer extends React.Component {
     //     this.props.pop();
     // }
 
+  
     render() {
+        
         const { navigate } = this.props.navigation;
         return (
             <View style={{flex:1}}>
@@ -70,10 +92,11 @@ class ContactsContainer extends React.Component {
                     items={this.state.items}
                     onPressItem={(rowData,rowID)=>navigate('ContactDetails',{item:rowData, id:rowID})}
                     onLongPressItem={this.quickMenu}/>
+                 
                 <TouchableHighlight
                     style={[styles.button, styles.newButton]}
                     underlayColor='#99d9f4'
-                    onPress={() => navigate('ContactAdd')}>
+                    onPress={() => navigate('ContactAdd',{items:this.state.items})}>
                     <Text style={styles.buttonText}>+</Text>
                 </TouchableHighlight>
             </View>

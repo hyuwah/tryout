@@ -34,6 +34,14 @@ var styles = StyleSheet.create({
         padding: 10,
     },
 
+    centerTop: {
+        flex: 1,
+       flexDirection: 'column',
+       justifyContent: 'flex-start',
+       alignItems: 'center',
+        padding: 10,
+    },
+
     contactDetail: {
         flex: 1,
        flexDirection: 'column',
